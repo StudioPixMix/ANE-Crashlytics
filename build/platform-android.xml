@@ -1,0 +1,11 @@
+<platform xmlns="http://ns.adobe.com/air/extension/16.0">
+    <packagedDependencies>
+		<packagedDependency>crashlytics.jar</packagedDependency>
+    </packagedDependencies>
+	<packagedResources>
+        <packagedResource>
+            <packageName>com.crashlytics.android</packageName>
+            <folderName>crashlytics-res</folderName>
+        </packagedResource>
+    </packagedResources>
+</platform>
