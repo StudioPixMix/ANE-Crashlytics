@@ -18,7 +18,6 @@
 
         <exec executable="xcodebuild" failonerror="true" dir="../ios/">
             <arg line="-project ${name}.xcodeproj"/>
-            <arg line="-sdk ${ios.sdkversion}"/>
             <arg line="-alltargets"/>
             <arg line="-configuration Release"/>
             <arg line="SYMROOT=../temp/"/>
