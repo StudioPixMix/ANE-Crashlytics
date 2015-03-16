@@ -55,7 +55,7 @@
 				<pathelement location="../android/libs/crashlytics.jar"/>
 			</classpath>
 		</javac>
-		<jar basedir="../bin/android/temp/classes" destfile="../bin/android/${name}.jar"/>
+		<jar basedir="../bin/android/temp/classes" destfile="../bin/android/lib${name}.jar"/>
 		<delete dir="../bin/android/temp"/>
 		
 		<!-- Copy all JAR dependencies -->
@@ -119,7 +119,7 @@
 			<arg line="-platform Android-x86 -platformoptions ../build/platform-android.xml -C android/ ."/>
             <arg line="-platform default -C default/ ."/>
         </exec>
-		<copy file="../bin/actionscript/default/${name}.swc" todir="../bin" overwrite="true"/>
+		<copy file="../bin/actionscript/${name}.swc" todir="../bin" overwrite="true"/>
 		<echo message="Done."/>
     </target>
 	
