@@ -271,20 +271,15 @@
 <android>
         <manifestAdditions><![CDATA[
 			<manifest android:installLocation="auto">
-<!-- Android SDK versions -->
-				<uses-sdk android:minSdkVersion="13" android:targetSdkVersion="19"/>
-	            
 	            
 				<!-- # CRASHLYTICS # -->
 				<uses-permission android:name="android.permission.INTERNET"/>
 				
 			    <application>
 			    	
-					
 					<!-- Crashlytics -->
 					<meta-data android:name="com.crashlytics.ApiKey" android:value="130bbc0b7ed5fa96a08af558809aa6b74cc2dc08" />
-					<activity android:name="com.freshplanet.ane.AirCrashlytics.activities.CrashActivity"
-							  android:theme="@android:style/Theme.Translucent"/>
+					<activity android:name="com.freshplanet.ane.crashlytics.activities.CrashActivity" />
 					
 			    </application>
 			</manifest>
@@ -305,6 +300,7 @@
         <requestedDisplayResolution>high</requestedDisplayResolution>
     </iPhone>
 <extensions>
-        <extensionID>com.freshplanet.AirCrashlytics</extensionID>
+        
+    <extensionID>com.freshplanet.Crashlytics</extensionID>
     </extensions>
 </application>

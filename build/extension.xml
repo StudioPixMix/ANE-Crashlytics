@@ -1,26 +1,26 @@
 <extension xmlns="http://ns.adobe.com/air/extension/16.0">
-  <id>com.freshplanet.AirCrashlytics</id>
+  <id>com.freshplanet.Crashlytics</id>
   <versionNumber>1.0</versionNumber>
   <platforms>
     <platform name="iPhone-ARM">
         <applicationDeployment>
-            <nativeLibrary>libAirCrashlytics.a</nativeLibrary>
-            <initializer>AirCrashlyticsInitializer</initializer> 
-            <finalizer>AirCrashlyticsFinalizer</finalizer>
+            <nativeLibrary>libCrashlytics.a</nativeLibrary>
+            <initializer>CrashlyticsInitializer</initializer> 
+            <finalizer>CrashlyticsFinalizer</finalizer>
         </applicationDeployment>
     </platform>
     <platform name="Android-ARM"> 
         <applicationDeployment> 
-            <nativeLibrary>libAirCrashlytics.jar</nativeLibrary> 
-            <initializer>com.freshplanet.ane.AirCrashlytics.Extension</initializer> 
-            <finalizer>com.freshplanet.ane.AirCrashlytics.Extension</finalizer> 
+            <nativeLibrary>libCrashlytics.jar</nativeLibrary> 
+            <initializer>com.freshplanet.ane.crashlytics.Extension</initializer> 
+            <finalizer>com.freshplanet.ane.crashlytics.Extension</finalizer> 
         </applicationDeployment> 
     </platform>
     <platform name="Android-x86"> 
         <applicationDeployment> 
-            <nativeLibrary>libAirCrashlytics.jar</nativeLibrary> 
-            <initializer>com.freshplanet.ane.AirCrashlytics.Extension</initializer> 
-            <finalizer>com.freshplanet.ane.AirCrashlytics.Extension</finalizer> 
+            <nativeLibrary>libCrashlytics.jar</nativeLibrary> 
+            <initializer>com.freshplanet.ane.crashlytics.Extension</initializer> 
+            <finalizer>com.freshplanet.ane.crashlytics.Extension</finalizer> 
         </applicationDeployment> 
     </platform>
     <platform name="default"> 

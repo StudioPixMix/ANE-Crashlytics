@@ -7,7 +7,7 @@ This is an [Air native extension](http://www.adobe.com/devnet/air/native-extensi
 Installation
 ---------
 
-The ANE binary (AirCrashlytics.ane) is located in the *bin* folder. You should add it to your application project's Build Path and make sure to package it with your app (more information [here](http://help.adobe.com/en_US/air/build/WS597e5dadb9cc1e0253f7d2fc1311b491071-8000.html)).
+The ANE binary (Crashlytics.ane) is located in the *bin* folder. You should add it to your application project's Build Path and make sure to package it with your app (more information [here](http://help.adobe.com/en_US/air/build/WS597e5dadb9cc1e0253f7d2fc1311b491071-8000.html)).
 
 Before you try to use this ANE, you should first complete the Crashlytics native workflow (iOS or Android) on a test project in order to get your API key. It is linked to your organization and is the same for all your apps, so you only need to do it once.
 
@@ -60,19 +60,19 @@ Usage
 
 ```actionscript
 // Start Crashlytics
-AirCrashlytics.start();
+Crashlytics.start();
 
 // Force a crash (iOS only)
-AirCrashlytics.crash();
+Crashlytics.crash();
 
 // Set a user identifier
-AirCrashlytics.userIdentifier = "myUserIdentifier";
+Crashlytics.userIdentifier = "myUserIdentifier";
 
 // Set some custom keys
-AirCrashlytics.setBool("myBoolKey", true);
-AirCrashlytics.setInt("myIntKey", 10);
-AirCrashlytics.setFloat("myFloatKey", 2.5);
-AirCrashlytics.setString("myStringKey", "myStringValue");
+Crashlytics.setBool("myBoolKey", true);
+Crashlytics.setInt("myIntKey", 10);
+Crashlytics.setFloat("myFloatKey", 2.5);
+Crashlytics.setString("myStringKey", "myStringValue");
 ```
 
 In order for crash reports to appear in your dashboard with iOS, you need to execute *tool/run.sh* after building your AIR application. You need to provide the path to your .dSYM file, so if you are compiling in release mode with Flash Builder be sure to check "Keep bin-release-temp folder" otherwise the .dSYM file will be deleted by Flash Builder:

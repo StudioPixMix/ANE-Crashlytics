@@ -1,6 +1,6 @@
 package
 {
-	import com.freshplanet.ane.AirCrashlytics.AirCrashlytics;
+	import com.freshplanet.ane.crashlytics.Crashlytics;
 	
 	import flash.display.Sprite;
 	import flash.display.StageAlign;
@@ -29,7 +29,7 @@ package
 		private function initCrashlytics():void {
 			trace("Initializing Crashlytics ...");
 			
-			AirCrashlytics.start();
+			Crashlytics.start();
 			
 			trace("Crashlytics initialized.");
 		}
@@ -68,7 +68,7 @@ package
 		
 		private function crash():void {
 			trace("Crashing app...");
-			AirCrashlytics.crash();
+			Crashlytics.crash();
 		}
 	}
 }
