@@ -31,7 +31,7 @@ DEFINE_ANE_FUNCTION(AirCrashlyticsSetString);
 
 
 // ANE Setup
-void AirCrashlyticsContextInitializer(void* extData, const uint8_t* ctxType, FREContext ctx, uint32_t* numFunctionsToTest, const FRENamedFunction** functionsToSet);
-void AirCrashlyticsContextFinalizer(FREContext ctx);
-void AirCrashlyticsInitializer(void** extDataToSet, FREContextInitializer* ctxInitializerToSet, FREContextFinalizer* ctxFinalizerToSet);
-void AirCrashlyticsFinalizer(void *extData);
+void CrashlyticsContextInitializer(void* extData, const uint8_t* ctxType, FREContext ctx, uint32_t* numFunctionsToTest, const FRENamedFunction** functionsToSet);
+void CrashlyticsContextFinalizer(FREContext ctx);
+void CrashlyticsInitializer(void** extDataToSet, FREContextInitializer* ctxInitializerToSet, FREContextFinalizer* ctxFinalizerToSet);
+void CrashlyticsFinalizer(void *extData);

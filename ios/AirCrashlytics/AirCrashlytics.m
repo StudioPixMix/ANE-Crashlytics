@@ -96,7 +96,7 @@ DEFINE_ANE_FUNCTION(AirCrashlyticsSetString)
 
 #pragma mark - ANE Setup
 
-void AirCrashlyticsContextInitializer(void* extData, const uint8_t* ctxType, FREContext ctx,
+void CrashlyticsContextInitializer(void* extData, const uint8_t* ctxType, FREContext ctx,
                                    uint32_t* numFunctionsToTest, const FRENamedFunction** functionsToSet)
 {
     NSDictionary *functions = @{
@@ -128,13 +128,13 @@ void AirCrashlyticsContextInitializer(void* extData, const uint8_t* ctxType, FRE
     context = ctx;
 }
 
-void AirCrashlyticsContextFinalizer(FREContext ctx) { }
+void CrashlyticsContextFinalizer(FREContext ctx) { }
 
-void AirCrashlyticsInitializer(void** extDataToSet, FREContextInitializer* ctxInitializerToSet, FREContextFinalizer* ctxFinalizerToSet)
+void CrashlyticsInitializer(void** extDataToSet, FREContextInitializer* ctxInitializerToSet, FREContextFinalizer* ctxFinalizerToSet)
 {
 	*extDataToSet = NULL;
-	*ctxInitializerToSet = &AirCrashlyticsContextInitializer;
-	*ctxFinalizerToSet = &AirCrashlyticsContextFinalizer;
+	*ctxInitializerToSet = &CrashlyticsContextInitializer;
+	*ctxFinalizerToSet = &CrashlyticsContextFinalizer;
 }
 
-void AirCrashlyticsFinalizer(void *extData) { }
+void CrashlyticsFinalizer(void *extData) { }
