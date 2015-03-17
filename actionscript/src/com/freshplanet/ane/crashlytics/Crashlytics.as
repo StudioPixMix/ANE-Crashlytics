@@ -29,6 +29,13 @@ package com.freshplanet.ane.crashlytics
 		// 																						 //
 		// --------------------------------------------------------------------------------------//
 		
+		/** The logging function you want to use. Defaults to trace. */
+		public static var logger:Function = trace;
+		/** The prefix appended to every log message. Defaults to "[Rollbar]". */
+		public static var logPrefix:String = "[Crashlytics]";
+		
+		
+		
 		/** Crashlytics is supported on iOS and Android devices. */
 		public static function get isSupported():Boolean
 		{
@@ -116,7 +123,10 @@ package com.freshplanet.ane.crashlytics
 		
 		private static function log(msg:String):void
 		{
-			trace("[Crashlytics] " + msg);
+			if(logger == null)
+				return;
+			
+			logger((logPrefix && logPrefix.length > 0 ? logPrefix + " " : "") + msg);
 		}
 	}
 }
