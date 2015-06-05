@@ -59,6 +59,15 @@ package com.freshplanet.ane.crashlytics
 			}
 		}
 		
+		/**
+		 * Logs the given exception to crashLytics. Use this method to report AS errors.
+		 */
+		public static function reportError(error:Error):String 
+		{
+			return call("reportError", error.getStackTrace());
+		}
+		
+		
 		public static function get apiKey():String
 		{
 			return call("getApiKey");

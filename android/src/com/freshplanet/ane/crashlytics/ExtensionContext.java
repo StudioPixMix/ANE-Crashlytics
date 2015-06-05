@@ -26,6 +26,7 @@ import com.adobe.fre.FREFunction;
 import com.freshplanet.ane.crashlytics.functions.CrashFunction;
 import com.freshplanet.ane.crashlytics.functions.GetApiKeyFunction;
 import com.freshplanet.ane.crashlytics.functions.GetVersionFunction;
+import com.freshplanet.ane.crashlytics.functions.ReportErrorFunction;
 import com.freshplanet.ane.crashlytics.functions.SetBoolFunction;
 import com.freshplanet.ane.crashlytics.functions.SetDebugModeFunction;
 import com.freshplanet.ane.crashlytics.functions.SetFloatFunction;
@@ -49,6 +50,7 @@ public class ExtensionContext extends FREContext
 		
 		functions.put("start", new StartFunction());
 		functions.put("crash", new CrashFunction());
+		functions.put("reportError", new ReportErrorFunction());
 		functions.put("getApiKey", new GetApiKeyFunction());
 		functions.put("getVersion", new GetVersionFunction());
 		functions.put("setDebugMode", new SetDebugModeFunction());
