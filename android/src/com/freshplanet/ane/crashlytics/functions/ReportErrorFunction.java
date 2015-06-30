@@ -15,7 +15,9 @@ public class ReportErrorFunction extends BaseFunction {
 	
 	public FREObject call(FREContext context, FREObject[] args){
 		String TAG = "CRASHLYTICS_REPORT_ERROR";
+		Log.i(TAG, "Reporting a custom error ...");
 		try {
+			Log.i(TAG, "Building stack trace ...");
 			String rawStackTrace = args[0].getAsString();
 			String[] lines = rawStackTrace.split("\n");
 			String[] stackTrace = new String[lines.length-1];
@@ -24,6 +26,7 @@ public class ReportErrorFunction extends BaseFunction {
 				stackTrace[i-1] = lines[i];
 			
 			Crashlytics.logException(new CustomException(lines[0], stackTrace));
+			Log.i(TAG, "Done.");
 		}
 		catch(Exception e) {
 			Log.i(TAG, "Error when reporting error : " + e);
