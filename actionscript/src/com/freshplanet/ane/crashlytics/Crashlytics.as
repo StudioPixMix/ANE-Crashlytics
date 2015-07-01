@@ -64,7 +64,13 @@ package com.freshplanet.ane.crashlytics
 		 */
 		public static function reportError(error:Error):String 
 		{
-			return call("reportError", error.getStackTrace());
+			// TODO
+			// Only calls report Error for Android for the moment, as the iOS side is not implemented yet.
+			if (Capabilities.manufacturer.indexOf("Android") > -1)
+			{
+				return call("reportError", error.getStackTrace());
+			}
+			return null;
 		}
 		
 		
