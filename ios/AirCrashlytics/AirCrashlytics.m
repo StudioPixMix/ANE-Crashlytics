@@ -17,6 +17,7 @@
 //////////////////////////////////////////////////////////////////////////////////////
 
 #import "AirCrashlytics.h"
+#import <Fabric/Fabric.h>
 #import <Crashlytics/Crashlytics.h>
 
 
@@ -99,6 +100,8 @@ DEFINE_ANE_FUNCTION(AirCrashlyticsSetString)
 void CrashlyticsContextInitializer(void* extData, const uint8_t* ctxType, FREContext ctx,
                                    uint32_t* numFunctionsToTest, const FRENamedFunction** functionsToSet)
 {
+    [Fabric with:@[CrashlyticsKit]];
+    
     NSDictionary *functions = @{
         @"start":               [NSValue valueWithPointer:&AirCrashlyticsStart],
         @"crash":               [NSValue valueWithPointer:&AirCrashlyticsCrash],

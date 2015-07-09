@@ -24,9 +24,12 @@
         </exec>
 
         <copy file="../temp/Release-iphoneos/lib${name}.a" todir="../bin/ios" overwrite="true"/>
-		<copy todir="../bin/ios/Crashlytics.framework" overwrite="true">
-            <fileset dir="../ios/Crashlytics.framework"/>
-        </copy>
+    	<copy todir="../bin/ios/Crashlytics.framework" overwrite="true">
+                <fileset dir="../ios/Crashlytics.framework"/>
+            </copy>
+    	<copy todir="../bin/ios/Fabric.framework" overwrite="true">
+    	    <fileset dir="../ios/Fabric.framework"/>
+    	</copy>
 
         <delete dir="../temp"/>
     </target>
