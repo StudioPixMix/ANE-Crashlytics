@@ -57,7 +57,7 @@ DEFINE_ANE_FUNCTION(AirCrashlyticsSetDebugMode)
 DEFINE_ANE_FUNCTION(AirCrashlyticsSetUserIdentifier)
 {
     NSString *userIdentifier = FPANE_FREObjectToNSString(argv[0]);
-    [Crashlytics setUserIdentifier:userIdentifier];
+    [[Crashlytics sharedInstance] setUserIdentifier:userIdentifier];
     return nil;
 }
 
@@ -65,7 +65,7 @@ DEFINE_ANE_FUNCTION(AirCrashlyticsSetBool)
 {
     NSString *key = FPANE_FREObjectToNSString(argv[0]);
     BOOL value = FPANE_FREObjectToBOOL(argv[1]);
-    [Crashlytics setBoolValue:value forKey:key];
+    [[Crashlytics sharedInstance] setBoolValue:value forKey:key];
     return nil;
 }
 
@@ -73,7 +73,7 @@ DEFINE_ANE_FUNCTION(AirCrashlyticsSetInt)
 {
     NSString *key = FPANE_FREObjectToNSString(argv[0]);
     NSInteger value = FPANE_FREObjectToNSInteger(argv[1]);
-    [Crashlytics setIntValue:(int)value forKey:key];
+    [[Crashlytics sharedInstance] setIntValue:(int)value forKey:key];
     return nil;
 }
 
@@ -81,7 +81,7 @@ DEFINE_ANE_FUNCTION(AirCrashlyticsSetFloat)
 {
     NSString *key = FPANE_FREObjectToNSString(argv[0]);
     double value = FPANE_FREObjectToDouble(argv[1]);
-    [Crashlytics setFloatValue:(float)value forKey:key];
+    [[Crashlytics sharedInstance] setFloatValue:(float)value forKey:key];
     return nil;
 }
 
@@ -89,7 +89,7 @@ DEFINE_ANE_FUNCTION(AirCrashlyticsSetString)
 {
     NSString *key = FPANE_FREObjectToNSString(argv[0]);
     NSString *value = FPANE_FREObjectToNSString(argv[1]);
-    [Crashlytics setObjectValue:value forKey:key];
+    [[Crashlytics sharedInstance] setObjectValue:value forKey:key];
     return nil;
 }
 
