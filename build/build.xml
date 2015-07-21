@@ -28,6 +28,12 @@
             <fileset dir="../ios/Crashlytics.framework"/>
         </copy>
 
+
+        <copy todir="../bin/ios/Fabric.framework" overwrite="true">
+            <fileset dir="../ios/Fabric.framework"/>
+        </copy>
+
+
         <delete dir="../temp"/>
     </target>
 

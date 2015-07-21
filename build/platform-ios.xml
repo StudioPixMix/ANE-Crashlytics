@@ -2,5 +2,6 @@
     <sdkVersion>7.0</sdkVersion>
     <packagedDependencies>
         <packagedDependency>Crashlytics.framework</packagedDependency>
+        <packagedDependency>Fabric.framework</packagedDependency>
     </packagedDependencies>
 </platform>
